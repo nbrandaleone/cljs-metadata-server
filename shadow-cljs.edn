@@ -1,0 +1,16 @@
+;; shadow-cljs configuration
+{:source-paths
+ ["src/dev"
+  "src/main"
+  "src/test"]
+
+ :dependencies
+  [[org.clojure/core.async "1.5.648"]]
+
+ :builds
+   {:app {:target :node-script
+          :output-to "main.js"
+          :main app/main
+          :compiler-options {:output-feature-set :es2020}
+          :release {:compiler-options {:optimizations :advanced}}
+          :devtools {:afer-load app/reload!}}}}
