@@ -14,4 +14,5 @@ The target directory (which included the executable) was not being copied over t
 The `gcloud` CLI was dynamically building a `.gcloudignore` file, and the target directory was in the list (due to being listed in `.gitignore`), thus being excluded from the build process.
 
 See: https://cloud.google.com/sdk/gcloud/reference/topic/gcloudignore
-Useful command: gcloud meta list-files-for-upload
+
+Useful command: `gcloud meta list-files-for-upload`
